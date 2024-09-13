@@ -5,6 +5,8 @@ import "./HomePage.css";
 import TopCategories from "./components/TopCategories/TopCategories";
 import TopCourses from "./components/TopCourses/TopCourses";
 import TopInstructors from "./components/TopInstructors/TopInstructors";
+import CustomerComments from "./components/CustomerComments/CustomerComments";
+
 
 
 export default function HomePage() {
@@ -15,7 +17,7 @@ export default function HomePage() {
       <TopCategories />
       <TopCourses />
       <TopInstructors />
-      {/* CustomerReviews (global comp) */}
+      <CustomerComments />
       {/* InstructorsOverview */}
     </div>
   );
