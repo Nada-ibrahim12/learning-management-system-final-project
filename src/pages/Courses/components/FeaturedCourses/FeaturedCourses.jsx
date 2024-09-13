@@ -1,9 +1,9 @@
 import React from "react";
-import "./TopCourses.css";
+import "./FeaturedCourses.css";
 import courseImage from "../../../../assets/course1.png";
 import { courses } from "../../../../data/dummyData";
 
-export default function TopCourses() {
+export default function FeaturedCourses() {
   const renderCourses = () => {
     return courses.slice(0, 4).map((course, index) => (
       <div className="col-lg-3 col-md-4 col-sm-6 mb-4" key={index}>
@@ -20,7 +20,7 @@ export default function TopCourses() {
             <h6>by {course.instructorName}</h6>
           </div>
           <div className="rate d-flex flex-wrap">
-            {[...Array(Math.round(course.rating || 0))].map((_, i) => (
+            {[...Array(5)].map((star, i) => (
               <i className="fa-solid fa-star" key={i}></i>
             ))}
             <h6 className="mb-0">({course.ratingCount} Ratings)</h6>
@@ -45,11 +45,8 @@ export default function TopCourses() {
   return (
     <div className="container mt-5">
       <div className="row d-flex flex-wrap">
-        <div className="col-6 mb-3">
-          <h2>Top Courses</h2>
-        </div>
-        <div className="col-6 d-flex justify-content-end seeAll">
-          <a href="#">See All</a>
+        <div className="col-12 mb-3">
+          <h2>Featured Courses</h2>
         </div>
         {renderCourses()}
       </div>

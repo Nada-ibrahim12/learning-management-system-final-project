@@ -1,9 +1,12 @@
 import React from "react";
 import "./CoursesPage.css";
-import RateMenu from "./RateMenu/RateMenu";
-import ChaptersMenu from "./ChaptersMenu/ChaptersMenu";
-import PriceMenu from "./PriceMenu/PriceMenu";
-import CategoryMenu from "./CategoryMenu/CategoryMenu";
+import RateMenu from "./components/RateMenu/RateMenu";
+import ChaptersMenu from "./components/ChaptersMenu/ChaptersMenu";
+import PriceMenu from "./components/PriceMenu/PriceMenu";
+import CategoryMenu from "./components/CategoryMenu/CategoryMenu";
+import Courses from "./components/Courses/Courses";
+import PopularMentors from "./components/PopularMentors/PopularMentors";
+import FeaturedCourses from "./components/FeaturedCourses/FeaturedCourses";
 
 export default function CoursesPage() {
   return (
@@ -34,37 +37,27 @@ export default function CoursesPage() {
           </button>
           <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <li>
-              <a className="dropdown-item" href="#">
-                Action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Another action
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Something else here
-              </a>
+              <a className="dropdown-item" href="#"></a>
             </li>
           </ul>
         </div>
       </div>
-      <div>
-        <div className="row">
-          <div className="col-lg-3 col-md-3 ">
-            <div className="d-flex flex-column flex-wrap">
-              <RateMenu />
-              <ChaptersMenu />
-              <PriceMenu />
-              <CategoryMenu />
-            </div>
-          </div>
-          <div className="col-lg-8 col-md-12 ">
-            <div className="m-3"></div>
+      <div className="row">
+        <div className="col-lg-3 col-md-3">
+          <div className="d-flex flex-column flex-wrap">
+            <RateMenu />
+            <ChaptersMenu />
+            <PriceMenu />
+            <CategoryMenu />
           </div>
         </div>
+        <div className="col-lg-9 col-md-9">
+          <Courses />
+        </div>
+        <PopularMentors />
+        <br />
+        <br />
+        <FeaturedCourses />
       </div>
     </div>
   );
