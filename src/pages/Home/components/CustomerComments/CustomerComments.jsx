@@ -56,8 +56,8 @@ export default function CustomerComments() {
   };
 
   return (
-    <div className="container mt-5">
-      <div className="row d-flex flex-wrap">
+    <div className="container-fluid mt-5 p-5 customer">
+      <div className="row d-flex flex-wrap ps-5 pe-3 pb-3">
         <div className="col-4">
           <h2>What Our Customers Say About Us</h2>
         </div>
@@ -71,7 +71,7 @@ export default function CustomerComments() {
         </div>
       </div>
 
-      <div className="row">{renderCustomers()}</div>
+      <div className="row ps-5 ">{renderCustomers()}</div>
     </div>
   );
 }
