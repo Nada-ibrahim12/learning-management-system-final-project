@@ -6,6 +6,7 @@ import TopCategories from "./components/TopCategories/TopCategories";
 import TopCourses from "./components/TopCourses/TopCourses";
 import TopInstructors from "./components/TopInstructors/TopInstructors";
 import CustomerComments from "./components/CustomerComments/CustomerComments";
+import InstructorsOverview from "./components/InstructorsOverview/InstructorsOverview";
 
 
 
@@ -18,7 +19,7 @@ export default function HomePage() {
       <TopCourses />
       <TopInstructors />
       <CustomerComments />
-      {/* InstructorsOverview */}
+      <InstructorsOverview />
     </div>
   );
 }
