@@ -1,5 +1,9 @@
 import React from "react";
 import "./CoursesPage.css";
+import RateMenu from "./RateMenu/RateMenu";
+import ChaptersMenu from "./ChaptersMenu/ChaptersMenu";
+import PriceMenu from "./PriceMenu/PriceMenu";
+import CategoryMenu from "./CategoryMenu/CategoryMenu";
 
 export default function CoursesPage() {
   return (
@@ -51,6 +55,10 @@ export default function CoursesPage() {
         <div className="row">
           <div className="col-lg-3 col-md-3 ">
             <div className="d-flex flex-column flex-wrap">
+              <RateMenu />
+              <ChaptersMenu />
+              <PriceMenu />
+              <CategoryMenu />
             </div>
           </div>
           <div className="col-lg-8 col-md-12 ">

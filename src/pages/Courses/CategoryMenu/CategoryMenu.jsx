@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ChaptersMenu() {
+export default function CategoryMenu() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
 
   const toggleChaptersMenu = () => {
@@ -11,11 +11,11 @@ export default function ChaptersMenu() {
     <div className="w-100">
       <div
         onClick={toggleChaptersMenu}
-        className="d-flex justify-content-between w-100 cursor-pointer"
+        className="d-flex justify-content-between w-100"
       >
-        <p>Number of Chapters</p>
+        Category
         <i
-          className={`ps-2 align-items-center ${
+          className={`ps-2 align-items-center  ${
             isMenuVisible ? "fa-solid fa-angle-up " : "fa-solid fa-angle-down "
           }`}
         ></i>
@@ -24,27 +24,27 @@ export default function ChaptersMenu() {
       {isMenuVisible && (
         <div className="">
           <div className="d-flex align-items-center mb-2">
-            <input type="checkbox" id="checkbox1-10" className="checkbox" />
-            <label htmlFor="checkbox1-10" className="ms-2">
-              1-10
+            <input type="checkbox" id="" className="checkbox" />
+            <label htmlFor="" className="ms-2">
+              Front-end
             </label>
           </div>
           <div className="d-flex align-items-center mb-2">
-            <input type="checkbox" id="checkbox10-15" className="checkbox" />
-            <label htmlFor="checkbox10-15" className="ms-2">
-              10-15
+            <input type="checkbox" id="" className="checkbox" />
+            <label htmlFor="" className="ms-2">
+              Back-end
             </label>
           </div>
           <div className="d-flex align-items-center mb-2">
-            <input type="checkbox" id="checkbox15-20" className="checkbox" />
-            <label htmlFor="checkbox15-20" className="ms-2">
-              15-20
+            <input type="checkbox" id="" className="checkbox" />
+            <label htmlFor="" className="ms-2">
+              UI-UX
             </label>
           </div>
           <div className="d-flex align-items-center mb-2">
-            <input type="checkbox" id="checkbox20-25" className="checkbox" />
-            <label htmlFor="checkbox20-25" className="ms-2">
-              20-25
+            <input type="checkbox" id="" className="checkbox" />
+            <label htmlFor="" className="ms-2">
+              Flutter
             </label>
           </div>
         </div>
