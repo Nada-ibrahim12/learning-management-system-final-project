@@ -1,0 +1,4 @@
+.course-page .container {
+  display: flex;
+  justify-content: space-between;
+}
