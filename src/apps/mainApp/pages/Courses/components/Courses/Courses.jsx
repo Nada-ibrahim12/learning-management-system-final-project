@@ -20,6 +20,18 @@ export default function Courses() {
     setCurrentPage(pageNumber);
   };
 
+  const handleNextPage = () => {
+    if (currentPage < pageNumbers.length) {
+      setCurrentPage((prev) => prev + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prev) => prev - 1);
+    }
+  };
+
   const renderCourses = () => {
     return currentCourses.map((course, i) => (
       <div className="col-lg-4 col-md-6 mb-4" key={i}>
@@ -63,6 +75,16 @@ export default function Courses() {
       <div className="row">{renderCourses()}</div>
       <nav className="d-flex justify-content-center my-5">
         <ul className="pagination pagination-sm">
+          <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
+            <a
+              className="page-link"
+              href="#"
+              onClick={handlePreviousPage}
+              aria-label="Previous"
+            >
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
           {pageNumbers.map((num) => (
             <li
               key={num}
@@ -74,6 +96,20 @@ export default function Courses() {
               </a>
             </li>
           ))}
+          <li
+            className={`page-item ${
+              currentPage === pageNumbers.length ? "disabled" : ""
+            }`}
+          >
+            <a
+              className="page-link"
+              href="#"
+              onClick={handleNextPage}
+              aria-label="Next"
+            >
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
