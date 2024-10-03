@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import { couponUsers } from "../../../../../../../../data/dummyData";
 import Table from "../../../Table/Table";
 import Pagination from "../../../../../../../components/Pagination";
@@ -9,9 +9,13 @@ export default function CouponDetails() {
   const usersPerPage = 10;
 
   const location = useLocation();
-  const { offerid } = useParams();
+  const { offerid, courseId } = useParams();
   const queryParams = new URLSearchParams(location.search);
   const offerName = queryParams.get("offerName");
+
+  console.log("Course ID:", courseId);
+  console.log("Offer ID:", offerid);
+  console.log("Offer Name:", offerName);
 
   const indexOfLastUser = currentPage * usersPerPage;
   const indexOfFirstUser = indexOfLastUser - usersPerPage;
@@ -48,7 +52,22 @@ export default function CouponDetails() {
           <h3>Coupon Details / {offerName}</h3>
         </div>
         <div className="col-4 d-flex justify-content-end">
-          <button className="btn btn-primary">Edit Coupon</button>
+          <Link
+            to={`/dashboard/courses/${courseId}/promotion/${offerid}/editcoupon?offerName=${encodeURIComponent(
+              offerName
+            )}&username=${encodeURIComponent(
+              couponUsers.username
+            )}&code=${encodeURIComponent(
+              couponUsers.code
+            )}&totalAmount=${encodeURIComponent(
+              couponUsers.totalAmount
+            )}&discountAmount=${encodeURIComponent(
+              couponUsers.discountAmount
+            )}`}
+            className="btn btn-primary"
+          >
+            Edit Coupon
+          </Link>
         </div>
       </div>
       <Table columns={couponsColumns} data={currentUsers} />

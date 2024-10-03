@@ -1,21 +1,96 @@
 // dummy data for CouponUser
 
 module.exports.couponUsers = [
-  { username: "Jonas", code: "SUMMER20", totalAmount: "$32", discountAmount: "$9" },
-  { username: "Alice", code: "SUMMER20", totalAmount: "$45", discountAmount: "$12" },
-  { username: "Bob", code: "SUMMER20", totalAmount: "$50", discountAmount: "$10" },
-  { username: "Charlie", code: "SUMMER20", totalAmount: "$60", discountAmount: "$15" },
-  { username: "Diana", code: "SUMMER20", totalAmount: "$80", discountAmount: "$20" },
-  { username: "Ethan", code: "SUMMER20", totalAmount: "$25", discountAmount: "$5" },
-  { username: "Fiona", code: "SUMMER20", totalAmount: "$30", discountAmount: "$7" },
-  { username: "George", code: "SUMMER20", totalAmount: "$70", discountAmount: "$18" },
-  { username: "Hannah", code: "SUMMER20", totalAmount: "$55", discountAmount: "$14" },
-  { username: "Isaac", code: "SUMMER20", totalAmount: "$90", discountAmount: "$25" },
-  { username: "Jack", code: "SUMMER20", totalAmount: "$40", discountAmount: "$11" },
-  { username: "Kathy", code: "SUMMER20", totalAmount: "$65", discountAmount: "$16" },
-  { username: "Liam", code: "SUMMER20", totalAmount: "$75", discountAmount: "$20" },
-  { username: "Mia", code: "SUMMER20", totalAmount: "$100", discountAmount: "$30" },
-  { username: "Noah", code: "SUMMER20", totalAmount: "$85", discountAmount: "$22" },
+  {
+    username: "Jonas",
+    code: "SUMMER20",
+    totalAmount: "$32",
+    discountAmount: "$9"
+  },
+  {
+    username: "Alice",
+    code: "SUMMER20",
+    totalAmount: "$45",
+    discountAmount: "$12"
+  },
+  {
+    username: "Bob",
+    code: "SUMMER20",
+    totalAmount: "$50",
+    discountAmount: "$10"
+  },
+  {
+    username: "Charlie",
+    code: "SUMMER20",
+    totalAmount: "$60",
+    discountAmount: "$15"
+  },
+  {
+    username: "Diana",
+    code: "SUMMER20",
+    totalAmount: "$80",
+    discountAmount: "$20"
+  },
+  {
+    username: "Ethan",
+    code: "SUMMER20",
+    totalAmount: "$25",
+    discountAmount: "$5"
+  },
+  {
+    username: "Fiona",
+    code: "SUMMER20",
+    totalAmount: "$30",
+    discountAmount: "$7"
+  },
+  {
+    username: "George",
+    code: "SUMMER20",
+    totalAmount: "$70",
+    discountAmount: "$18"
+  },
+  {
+    username: "Hannah",
+    code: "SUMMER20",
+    totalAmount: "$55",
+    discountAmount: "$14"
+  },
+  {
+    username: "Isaac",
+    code: "SUMMER20",
+    totalAmount: "$90",
+    discountAmount: "$25"
+  },
+  {
+    username: "Jack",
+    code: "SUMMER20",
+    totalAmount: "$40",
+    discountAmount: "$11"
+  },
+  {
+    username: "Kathy",
+    code: "SUMMER20",
+    totalAmount: "$65",
+    discountAmount: "$16"
+  },
+  {
+    username: "Liam",
+    code: "SUMMER20",
+    totalAmount: "$75",
+    discountAmount: "$20"
+  },
+  {
+    username: "Mia",
+    code: "SUMMER20",
+    totalAmount: "$100",
+    discountAmount: "$30"
+  },
+  {
+    username: "Noah",
+    code: "SUMMER20",
+    totalAmount: "$85",
+    discountAmount: "$22"
+  },
 ];
 
 
@@ -581,15 +656,42 @@ module.exports.orders = [
 
 // dummy data for courses list (dashboard)
 module.exports.dummyCourses = [
-  { id: 0, name: "Course A" },
-  { id: 1, name: "Course B" },
-  { id: 2, name: "Course C" },
-  { id: 3, name: "Course D" },
-  { id: 4, name: "Course E" },
-  { id: 5, name: "Course F" },
-  { id: 6, name: "Course G" },
-  { id: 7, name: "Course H" },
-  { id: 8, name: "Course I" },
+  {
+    id: 0,
+    name: "Course A"
+  },
+  {
+    id: 1,
+    name: "Course B"
+  },
+  {
+    id: 2,
+    name: "Course C"
+  },
+  {
+    id: 3,
+    name: "Course D"
+  },
+  {
+    id: 4,
+    name: "Course E"
+  },
+  {
+    id: 5,
+    name: "Course F"
+  },
+  {
+    id: 6,
+    name: "Course G"
+  },
+  {
+    id: 7,
+    name: "Course H"
+  },
+  {
+    id: 8,
+    name: "Course I"
+  },
 ];
 
 // dummy data for my courses section
@@ -840,48 +942,48 @@ module.exports.customers = [
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,I appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
   {
     name: "Jane Doe",
     jobTitle: "Designer",
     imgSrc: "",
     quote:
-      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world, I appreciate the up-to-date content and engaging multimedia.",
+      "Byway's tech courses are top-notch! As someone who's always looking to stay ahead in the rapidly evolving tech world,appreciate the up- to - date content and engaging multimedia.",
   },
 ];
