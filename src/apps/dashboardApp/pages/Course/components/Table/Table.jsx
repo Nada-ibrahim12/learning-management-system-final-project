@@ -1,7 +1,7 @@
 import React from "react";
 import "./Table.css";
 
-export default function Table({ data, columns }) {
+export default function Table({ data, columns, onRowClick }) {
   return (
     <div className="tableData py-2">
       <table className="table table-hover w-100 text-center">
@@ -19,7 +19,11 @@ export default function Table({ data, columns }) {
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr key={index}>
+            <tr
+              key={index}
+              onClick={() => onRowClick && onRowClick(row)}
+              style={{ cursor: onRowClick ? "pointer" : "default" }}
+            >
               {columns.map((col, colIndex) => (
                 <td key={colIndex}>{row[col.accessor]}</td>
               ))}

@@ -1,3 +1,165 @@
+// dummy data for CouponUser
+
+module.exports.couponUsers = [
+  { username: "Jonas", code: "SUMMER20", totalAmount: "$32", discountAmount: "$9" },
+  { username: "Alice", code: "SUMMER20", totalAmount: "$45", discountAmount: "$12" },
+  { username: "Bob", code: "SUMMER20", totalAmount: "$50", discountAmount: "$10" },
+  { username: "Charlie", code: "SUMMER20", totalAmount: "$60", discountAmount: "$15" },
+  { username: "Diana", code: "SUMMER20", totalAmount: "$80", discountAmount: "$20" },
+  { username: "Ethan", code: "SUMMER20", totalAmount: "$25", discountAmount: "$5" },
+  { username: "Fiona", code: "SUMMER20", totalAmount: "$30", discountAmount: "$7" },
+  { username: "George", code: "SUMMER20", totalAmount: "$70", discountAmount: "$18" },
+  { username: "Hannah", code: "SUMMER20", totalAmount: "$55", discountAmount: "$14" },
+  { username: "Isaac", code: "SUMMER20", totalAmount: "$90", discountAmount: "$25" },
+  { username: "Jack", code: "SUMMER20", totalAmount: "$40", discountAmount: "$11" },
+  { username: "Kathy", code: "SUMMER20", totalAmount: "$65", discountAmount: "$16" },
+  { username: "Liam", code: "SUMMER20", totalAmount: "$75", discountAmount: "$20" },
+  { username: "Mia", code: "SUMMER20", totalAmount: "$100", discountAmount: "$30" },
+  { username: "Noah", code: "SUMMER20", totalAmount: "$85", discountAmount: "$22" },
+];
+
+
+// dummy data for Coupons
+
+module.exports.couponsData = [
+  {
+    offerId: 1,
+    offerName: "Summer Sale",
+    code: "SUMMER20",
+    amount: "$20",
+    status: "Active",
+    qty: 150,
+    redemptions: 75,
+  },
+  {
+    offerId: 2,
+    offerName: "Winter Discount",
+    code: "WINTER15",
+    amount: "$15",
+    status: "Expired",
+    qty: 200,
+    redemptions: 120,
+  },
+  {
+    offerId: 3,
+    offerName: "Black Friday Deal",
+    code: "BLACK50",
+    amount: "$50",
+    status: "Scheduled",
+    qty: 500,
+    redemptions: 300,
+  },
+  {
+    offerId: 4,
+    offerName: "Cyber Monday Special",
+    code: "CYBER30",
+    amount: "$30",
+    status: "Draft",
+    qty: 100,
+    redemptions: 80,
+  },
+  {
+    offerId: 5,
+    offerName: "Spring Savings",
+    code: "SPRING25",
+    amount: "$25",
+    status: "Expired",
+    qty: 250,
+    redemptions: 150,
+  },
+  {
+    offerId: 6,
+    offerName: "Holiday Bash",
+    code: "HOLIDAY10",
+    amount: "$10",
+    status: "Active",
+    qty: 300,
+    redemptions: 220,
+  },
+  {
+    offerId: 7,
+    offerName: "New Year Promo",
+    code: "NEWYEAR50",
+    amount: "$50",
+    status: "Expired",
+    qty: 450,
+    redemptions: 400,
+  },
+  {
+    offerId: 8,
+    offerName: "Back to School",
+    code: "SCHOOL15",
+    amount: "$15",
+    status: "Active",
+    qty: 200,
+    redemptions: 160,
+  },
+  {
+    offerId: 9,
+    offerName: "Valentine's Special",
+    code: "LOVE30",
+    amount: "$30",
+    status: "Scheduled",
+    qty: 100,
+    redemptions: 90,
+  },
+  {
+    offerId: 10,
+    offerName: "Weekend Frenzy",
+    code: "WEEKEND5",
+    amount: "$5",
+    status: "Draft",
+    qty: 1000,
+    redemptions: 600,
+  },
+  {
+    offerId: 11,
+    offerName: "Anniversary Bonus",
+    code: "ANNIV40",
+    amount: "$40",
+    status: "Expired",
+    qty: 350,
+    redemptions: 300,
+  },
+  {
+    offerId: 12,
+    offerName: "Festive Offer",
+    code: "FESTIVE20",
+    amount: "$20",
+    status: "Active",
+    qty: 250,
+    redemptions: 180,
+  },
+  {
+    offerId: 13,
+    offerName: "Clearance Discount",
+    code: "CLEARANCE10",
+    amount: "$10",
+    status: "Scheduled",
+    qty: 500,
+    redemptions: 450,
+  },
+  {
+    offerId: 14,
+    offerName: "Flash Sale",
+    code: "FLASH25",
+    amount: "$25",
+    status: "Draft",
+    qty: 700,
+    redemptions: 400,
+  },
+  {
+    offerId: 15,
+    offerName: "Birthday Bash",
+    code: "BIRTHDAY50",
+    amount: "$50",
+    status: "Expired",
+    qty: 120,
+    redemptions: 95,
+  },
+];
+
+
 // dummy data for chapters
 
 module.exports.chapters = [
@@ -415,6 +577,19 @@ module.exports.orders = [
     status: "Received",
     commission: "42.00",
   },
+];
+
+// dummy data for courses list (dashboard)
+module.exports.dummyCourses = [
+  { id: 0, name: "Course A" },
+  { id: 1, name: "Course B" },
+  { id: 2, name: "Course C" },
+  { id: 3, name: "Course D" },
+  { id: 4, name: "Course E" },
+  { id: 5, name: "Course F" },
+  { id: 6, name: "Course G" },
+  { id: 7, name: "Course H" },
+  { id: 8, name: "Course I" },
 ];
 
 // dummy data for my courses section
