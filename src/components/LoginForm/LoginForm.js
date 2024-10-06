@@ -1,6 +1,6 @@
 import React from "react";
-import { DevTool } from "@hookform/devtools";
-import { useForm } from "react-hook-form";
+import { DevTool } from '@hookform/devtools';
+import { useForm } from 'react-hook-form';
 
 export default function LoginForm({ role = "student" }) {
   const {
@@ -29,9 +29,8 @@ export default function LoginForm({ role = "student" }) {
         <label>
           <span>Email</span>
           <input
-            className={`form-control ${
-              errors?.email ? "is-invalid border-danger" : ""
-            }`}
+            className={`form-control ${errors?.email ? "is-invalid border-danger" : ""
+              }`}
             type="email"
             placeholder="type your email"
             {...register("email", {
@@ -42,9 +41,8 @@ export default function LoginForm({ role = "student" }) {
         <label>
           <span>Password</span>
           <input
-            className={`form-control ${
-              errors?.password ? "is-invalid border-danger" : ""
-            }`}
+            className={`form-control ${errors?.password ? "is-invalid border-danger" : ""
+              }`}
             id="password"
             placeholder="type your password"
             {...register("password", {
