@@ -1,3 +1,7 @@
+.profile-page-aside {
+  margin-bottom: 0 !important;
+}
+
 .profile-page-aside a {
   text-transform: capitalize;
   display: block;
@@ -7,4 +11,13 @@
 .profile-page-aside a.active {
   background-color: #000;
   color: #fff;
+}
+
+.profile-page-aside .profileImg img {
+  width: 160px;
+  height: 160px;
+}
+
+.profile-page-aside .profileImg a {
+  border-bottom: 1px solid var(--grey-border);
 }

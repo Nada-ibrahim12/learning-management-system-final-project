@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import HomePage from "./pages/Home/HomePage";
 import CoursesPage from "./pages/Courses/CoursesPage";
-import Communication from "./pages/Communication/components/CommunicationPage";
+import Communication from "./pages/Communication/CommunicationPage";
 import RevenuePage from "./pages/Revenue/components/RevenuePage";
 import SettingsPage from "./pages/Settings/components/SettingsPage";
 import CoursePage from "./pages/Course/CoursesPage";
@@ -19,10 +19,25 @@ import ChaptersTabResourcesTab from "./pages/Course/components/ChaptersTab/Chapt
 import ChaptersTabDetailsTab from "./pages/Course/components/ChaptersTab/ChaptersTabDetailsTab/ChaptersTabDetailsTab";
 import CouponDetails from "./pages/Course/components/PromotionTab/components/CouponDetails/CouponDetails";
 import EditCoupon from "./pages/Course/components/PromotionTab/components/CouponDetails/components/EditCoupon/EditCoupon";
+import SignupPage from "./pages/Signup/SignupPage";
+import LoginPage from "./pages/Login/LoginPage";
+import Profile from "./pages/Profile/Profile";
+import MessagesTab from "./pages/Communication/components/MessagesTab/MessagesTab";
 
 export default function DashboardApp() {
+  const location = useLocation();
   return (
-    <div className="dashboard-app">
+    <div
+      className="dashboard-app"
+      style={
+        location.pathname.includes("signup") ||
+        location.pathname.includes("login")
+          ? {
+              gridTemplateColumns: "1fr",
+            }
+          : {}
+      }
+    >
       <Sidebar />
       <Routes>
         <Route index element={<HomePage />} />
@@ -45,11 +60,16 @@ export default function DashboardApp() {
             <Route path="settings" element={<SettingsTab />} />
           </Route>
         </Route>
-        <Route path="communication" element={<Communication />} />
+        <Route path="communication" element={<Communication />}>
+          <Route index element={<ReviewsTab />} />
+          <Route path="reviews" element={<ReviewsTab />} />
+          <Route path="messages" element={<MessagesTab />} />
+        </Route>
         <Route path="revenue" element={<RevenuePage />} />
         <Route path="settings" element={<SettingsPage />} />
-        <Route path="login" element={""} />
-        <Route path="signup" element={""} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="login" element={<LoginPage />} />
+        <Route path="signup" element={<SignupPage />} />
         <Route path="*" element={"NotFound on dashboard app !!"} />
       </Routes>
     </div>

@@ -1,15 +1,16 @@
 import React from "react";
 import "./CheckoutPage.css";
+import PaymentMethods from "./components/PaymentMethods/PaymentMethods";
+import LayoutCart from "../../layouts/Cart/Cart";
 
 export default function CheckoutPage() {
   return (
     <div className="checkout-page">
-      {/* 01 Header - create/import it from the global "src/components/CartPageHeader" */}
-      <div className="checkout-body">
-        {/* 02 paymentMethods section */}
-        {/* 03 summery section */}
-      </div>
-      CheckoutPage
+      <LayoutCart title="Checkout Page" isCheckoutPage={true}>
+        <div className="checkout-page-content">
+          <PaymentMethods />
+        </div>
+      </LayoutCart>
     </div>
   );
 }
