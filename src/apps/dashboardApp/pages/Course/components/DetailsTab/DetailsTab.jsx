@@ -1,13 +1,13 @@
 import React from "react";
 import "./DetailsTab.css";
-import CourseCard from "./courseCard";
+import CourseCard from "./components/CourseCard";
 
 export default function DetailsTab() {
   return (
     <div className="details-tab">
       <h3 className="ps-1 my-4">Course Details</h3>
-      <div className="details-tab-container d-flex">
-        <div className="details-tab-content w-75">
+      <div className="details-tab-container d-flex row">
+        <div className="details-tab-content col-lg-8 col-md-6 col-sm-12">
           <div className="courseName w-100">
             <h6 className="">Course Name</h6>
             <h5 className=" text-black fs-6 fw-normal">
@@ -35,7 +35,7 @@ export default function DetailsTab() {
             </div>
           </div>
         </div>
-        <div className="details-tab-aside w-25 ms-4">
+        <div className="details-tab-aside col-lg-3 col-md-5 col-sm-12 d-flex justify-content-center ms-4">
           <CourseCard />
         </div>
       </div>

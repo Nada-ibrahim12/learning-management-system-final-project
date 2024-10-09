@@ -39,39 +39,41 @@ export default function DashboardApp() {
       }
     >
       <Sidebar />
-      <Routes>
-        <Route index element={<HomePage />} />
-        <Route path="courses">
-          <Route index element={<CoursesPage />} />
-          <Route path=":courseId" element={<CoursePage />}>
-            <Route index element={<CommissionTab />} />
-            <Route path="reviews" element={<ReviewsTab />} />
-            <Route path="customer" element={<CustomerTab />} />
-            <Route path="chapters" element={<ChaptersTab />}>
-              <Route index element={<ChaptersTabDetailsTab />} />
-              <Route path="resources" element={<ChaptersTabResourcesTab />} />
+      <div>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="courses">
+            <Route index element={<CoursesPage />} />
+            <Route path=":courseId" element={<CoursePage />}>
+              <Route index element={<CommissionTab />} />
+              <Route path="reviews" element={<ReviewsTab />} />
+              <Route path="customer" element={<CustomerTab />} />
+              <Route path="chapters" element={<ChaptersTab />}>
+                <Route index element={<ChaptersTabDetailsTab />} />
+                <Route path="resources" element={<ChaptersTabResourcesTab />} />
+              </Route>
+              <Route path="promotion">
+                <Route index element={<PromotionTab />} />
+                <Route path=":offerid" element={<CouponDetails />} />
+                <Route path=":offerid/editcoupon" element={<EditCoupon />} />
+              </Route>
+              <Route path="details" element={<DetailsTab />} />
+              <Route path="settings" element={<SettingsTab />} />
             </Route>
-            <Route path="promotion">
-              <Route index element={<PromotionTab />} />
-              <Route path=":offerid" element={<CouponDetails />} />
-              <Route path=":offerid/editcoupon" element={<EditCoupon />} />
-            </Route>
-            <Route path="details" element={<DetailsTab />} />
-            <Route path="settings" element={<SettingsTab />} />
           </Route>
-        </Route>
-        <Route path="communication" element={<Communication />}>
-          <Route index element={<ReviewsTab />} />
-          <Route path="reviews" element={<ReviewsTab />} />
-          <Route path="messages" element={<MessagesTab />} />
-        </Route>
-        <Route path="revenue" element={<RevenuePage />} />
-        <Route path="settings" element={<SettingsPage />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="login" element={<LoginPage />} />
-        <Route path="signup" element={<SignupPage />} />
-        <Route path="*" element={"NotFound on dashboard app !!"} />
-      </Routes>
+          <Route path="communication" element={<Communication />}>
+            <Route index element={<ReviewsTab />} />
+            <Route path="reviews" element={<ReviewsTab />} />
+            <Route path="messages" element={<MessagesTab />} />
+          </Route>
+          <Route path="revenue" element={<RevenuePage />} />
+          <Route path="settings" element={<SettingsPage />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignupPage />} />
+          <Route path="*" element={"NotFound on dashboard app !!"} />
+        </Routes>
+      </div>
     </div>
   );
 }

@@ -11,7 +11,6 @@ export default function HomePage() {
           Add Course
         </Link>
       </header>
-      {/* */}
       <section></section>
       {/* line of reviews */}
       <section></section>

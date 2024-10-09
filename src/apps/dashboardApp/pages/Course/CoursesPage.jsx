@@ -1,6 +1,6 @@
 import React from "react";
 import "./CoursePage.css";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Tabs from "../../components/Tabs/Tabs";
 
 const tabs = [
@@ -17,7 +17,7 @@ export default function CoursePage() {
   const location = useLocation();
 
   return (
-    <div className="course-dash-page p-3">
+    <div className="course-dash-page ms-2 p-3">
       <header
         className="course-page-header"
         style={

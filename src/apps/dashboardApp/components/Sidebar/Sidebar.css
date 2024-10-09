@@ -63,40 +63,59 @@
   font-size: 14px;
 }
 
-/* closed sidebar */
-
-.sidebar.closed {
-  width: calc(48px + var(--pad) * 2);
+.sidebar.collapsed {
+  width: 80px;
+  transition: width 0.3s ease;
 }
 
-.sidebar.closed .open-close-arrow {
-  transform: rotate(180deg);
-}
-
-.sidebar.closed .logo,
-.sidebar.closed a span {
+.sidebar.collapsed .logo,
+.sidebar.collapsed a span {
   display: none;
 }
 
-.sidebar.closed header,
-.sidebar.closed nav li {
-  margin-bottom: 1rem;
+.sidebar.collapsed .footer img {
+  width: 40px;
+  height: 40px;
 }
 
-.sidebar.closed a {
-  padding: 0;
+.sidebar.collapsed .open-close-arrow {
+  transform: rotate(180deg);
 }
 
-@media (max-width: 1200px) {
-  .dashboard-app {
-    grid-template-columns: 1fr;
+.sidebar.collapsed a {
+  padding: 0.5rem;
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .sidebar-toggle {
+    display: block;
   }
+
   .sidebar {
     position: fixed;
     left: 0;
     top: 0;
+    height: 100vh;
   }
+
+  .sidebar.collapsed {
+    width: 80px;
+  }
+
   .dashboard-app .sidebar + div {
-    padding-left: calc(1rem + 48px + var(--pad) * 2);
+    padding-left: 60px;
   }
 }

@@ -12,30 +12,29 @@ import ProfileImg from "../../../../assets/mentorsImgs/profile.png";
 
 export default function Sidebar() {
   const location = useLocation();
-  const [isSideOpened, setIsSideOpened] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
-  function isSideOpenedHandler() {
-    setIsSideOpened(!isSideOpened);
+  function toggleSidebar() {
+    setIsCollapsed(!isCollapsed);
   }
 
   return (
     <aside
-      className={`sidebar ${isSideOpened ? "" : "closed"}`}
+      className={`sidebar ${isCollapsed ? "collapsed" : ""}`}
       style={
         location.pathname.includes("login") ||
         location.pathname.includes("signup")
-          ? {
-              display: "none",
-            }
+          ? { display: "none" }
           : {}
       }
     >
-      <header className="d-flex justify-content-between  align-items-center">
+      <header className="d-flex justify-content-between align-items-center">
         <Logo />
-        <i onClick={isSideOpenedHandler} className="open-close-arrow">
+        <i onClick={toggleSidebar} className="open-close-arrow">
           <CloseArrow />
         </i>
       </header>
+
       <nav>
         <ul>
           <li>
@@ -43,7 +42,7 @@ export default function Sidebar() {
               <i>
                 <DashboardIcon />
               </i>
-              <span>dashboard</span>
+              <span>Dashboard</span>
             </NavLink>
           </li>
           <li>
@@ -51,7 +50,7 @@ export default function Sidebar() {
               <i>
                 <CourseIcon />
               </i>
-              <span>courses</span>
+              <span>Courses</span>
             </NavLink>
           </li>
           <li>
@@ -59,7 +58,7 @@ export default function Sidebar() {
               <i>
                 <ChatIcon />
               </i>
-              <span>communication</span>
+              <span>Communication</span>
             </NavLink>
           </li>
           <li>
@@ -67,7 +66,7 @@ export default function Sidebar() {
               <i>
                 <DollarIcon />
               </i>
-              <span>revenue</span>
+              <span>Revenue</span>
             </NavLink>
           </li>
           <li>
@@ -75,17 +74,18 @@ export default function Sidebar() {
               <i>
                 <SettingIcon />
               </i>
-              <span>settings</span>
+              <span>Settings</span>
             </NavLink>
           </li>
         </ul>
       </nav>
+
       <Link
         to={"profile"}
-        className="footer d-flex align-items-center  flex-wrap gap-2"
+        className="footer d-flex align-items-center flex-wrap gap-2"
       >
-        <img src={ProfileImg} alt="profile-img"></img>
-        <span className=" text-nowrap navbar-text p-0">Hello, world!</span>
+        <img src={ProfileImg} alt="profile-img" />
+        <span className="text-nowrap navbar-text p-0">Hello, world!</span>
       </Link>
     </aside>
   );
