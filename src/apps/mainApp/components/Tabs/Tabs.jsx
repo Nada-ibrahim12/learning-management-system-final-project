@@ -3,7 +3,7 @@ import "./Tabs.css";
 
 export default function Tabs({ tabs = [] }) {
   return (
-    <ul className="tabs-items">
+    <ul className="tabs-items d-flex justify-content-center ">
       {tabs.map((name, i) => (
         <li>
           <a
